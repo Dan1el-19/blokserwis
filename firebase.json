@@ -1,0 +1,78 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/.htaccess"
+    ],
+    "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/domofony-lodz",
+        "destination": "/domofony_lodz.html"
+      },
+      {
+        "source": "/wideodomofony-lodz",
+        "destination": "/wideodomofony_lodz.html"
+      },
+      {
+        "source": "/monitoring-lodz",
+        "destination": "/monitoring_lodz.html"
+      },
+      {
+        "source": "/naprawa-monitoringu-lodz",
+        "destination": "/naprawa_monitoringu_lodz.html"
+      },
+      {
+        "source": "/naprawa-wideodomofonow-lodz",
+        "destination": "/naprawa_wideodomofonow_lodz.html"
+      },
+      {
+        "source": "/konserwacja-domofonow-lodz",
+        "destination": "/konserwacja_domofonow_lodz.html"
+      },
+      {
+        "source": "/montaz-wideodomofonow-lodz",
+        "destination": "/montaz_wideodomofonow_lodz.html"
+      },
+      {
+        "source": "/serwis-domofonow-lodz",
+        "destination": "/serwis_domofonow_lodz.html"
+      },
+      {
+        "source": "/serwis-wideodomofonow-lodz",
+        "destination": "/serwis_wideodomofonow_lodz.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|json)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      }
+    ],
+    "trailingSlash": false,
+    "cleanUrls": true
+  }
+}
