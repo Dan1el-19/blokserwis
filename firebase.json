@@ -7,14 +7,32 @@
       "**/node_modules/**",
       "**/.htaccess"
     ],
-    "redirects": [
-      {
-        "source": "/index.html",
-        "destination": "/",
-        "type": 301
-      }
-    ],
+    "redirects": [],
     "rewrites": [
+      {
+        "source": "/favicon.ico",
+        "destination": "/favicon/favicon.ico"
+      },
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/kontakt",
+        "destination": "/kontakt.html"
+      },
+      {
+        "source": "/uslugi", 
+        "destination": "/uslugi.html"
+      },
+      {
+        "source": "/realizacje",
+        "destination": "/realizacje.html"
+      },
+      {
+        "source": "/zaufalinam",
+        "destination": "/zaufalinam.html"
+      },
       {
         "source": "/domofony-lodz",
         "destination": "/domofony_lodz.html"
@@ -67,7 +85,15 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=86400"
+            "value": "no-cache, no-store, must-revalidate"
+          },
+          {
+            "key": "Pragma", 
+            "value": "no-cache"
+          },
+          {
+            "key": "Expires",
+            "value": "0"
           }
         ]
       }

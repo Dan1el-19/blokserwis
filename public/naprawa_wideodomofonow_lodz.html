@@ -3,16 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Cache busting meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Force cache invalidation with timestamp -->
+    <meta name="cache-version" content="20250829-v2">
     <title>BLOKSERWIS - Naprawa wideodomofonów Łódź Pabianice</title>
     <meta name="Description" content="Jesteśmy firmą w ofercie której najważniejszą pozycją jest ponad wszelką wątpliwość jest naprawa oraz serwis wideodomofonów. Zapraszamy do skorzystania z naszych usług." />
     
-    <link rel="stylesheet" type="text/css" href="css/design.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />   
+    <link rel="stylesheet" type="text/css" href="css/design.css?v=20250829" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css?v=20250829" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=20250829" media="screen" />   
    
-    <script type="text/javascript" src="./scripts/jquery.min.js"></script>   
-    <script type="text/javascript" src="./scripts/jquery.bxslider.min.js"></script> 
-    <script type="text/javascript" src="./scripts/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="./scripts/jquery.min.js?v=20250829"></script>   
+    <script type="text/javascript" src="./scripts/jquery.bxslider.min.js?v=20250829"></script> 
+    <script type="text/javascript" src="./scripts/jquery.fancybox.js?v=20250829"></script>
     
     <script>
       jQuery(document).ready(function($) {
@@ -57,6 +65,8 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico">
   <meta name="msapplication-config" content="/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <!-- Aggressive cache busting and URL correction -->
+  <script type="text/javascript" src="./scripts/cache-buster.js?v=20250829"></script>
   
   </head>
 <body>

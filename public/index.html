@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Cache busting meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Force cache invalidation with timestamp -->
+    <meta name="cache-version" content="20250829-v2">
+    
     <title>Montaż naprawa serwis domofonów wideodomofonów monitoringu Łódź Pabianice</title>
     <meta name="Description" content="✅ BLOKSERWIS - zajmujemy się modernizacją, instalacją, naprawą oraz konserwacją wideofonów, domofonów analogowych jak i cyfrowych oraz monitoringiem." />
     
-    <link rel="stylesheet" type="text/css" href="css/design.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />   
+    <link rel="stylesheet" type="text/css" href="css/design.css?v=20250829" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css?v=20250829" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=20250829" media="screen" />   
    
-    <script type="text/javascript" src="./scripts/jquery.min.js"></script>   
-    <script type="text/javascript" src="./scripts/jquery.bxslider.min.js"></script> 
-    <script type="text/javascript" src="./scripts/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="./scripts/jquery.min.js?v=20250829"></script>   
+    <script type="text/javascript" src="./scripts/jquery.bxslider.min.js?v=20250829"></script> 
+    <script type="text/javascript" src="./scripts/jquery.fancybox.js?v=20250829"></script>
     
     <script>
       jQuery(document).ready(function($) {
@@ -51,6 +60,37 @@
   ga('send', 'pageview');
 
 </script>
+
+  <!-- Force cache refresh script -->
+  <script>
+    // Force reload if accessing old cached URLs
+    (function() {
+      const currentUrl = window.location.href;
+      const domain = window.location.origin;
+      
+      // If someone tries to access index.html directly, redirect to /
+      if (currentUrl.endsWith('/index.html') || currentUrl.includes('index.html')) {
+        window.location.replace(domain + '/');
+        return;
+      }
+      
+      // Force refresh CSS/JS if they're cached without version
+      const links = document.querySelectorAll('link[rel="stylesheet"]');
+      const scripts = document.querySelectorAll('script[src]');
+      
+      links.forEach(link => {
+        if (!link.href.includes('?v=')) {
+          link.href = link.href + '?v=20250829';
+        }
+      });
+      
+      scripts.forEach(script => {
+        if (script.src && !script.src.includes('?v=')) {
+          script.src = script.src + '?v=20250829';
+        }
+      });
+    })();
+  </script>
   
   
   
@@ -59,11 +99,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
+  <link rel="manifest" href="/favicon/manifest.json?v=20250829">
   <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#d5b75b">
   <link rel="shortcut icon" href="/favicon/favicon.ico">
   <meta name="msapplication-config" content="/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  
+  <!-- Aggressive cache busting and URL correction -->
+  <script type="text/javascript" src="./scripts/cache-buster.js?v=20250829"></script>
   
   </head>
 <body>
