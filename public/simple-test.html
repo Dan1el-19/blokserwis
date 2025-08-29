@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOKSERWIS - Simple Swiper Test</title>
+    
+    <!-- Original styles -->
+    <link rel="stylesheet" type="text/css" href="css/design.css" />
+    
+    <style>
+        /* Ensure Swiper works with existing design */
+        .swiper {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide1, .slide2 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Debug styles */
+        .debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 9999;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug" id="debug">
+        <strong>Debug Console:</strong><br>
+    </div>
+    
+    <h1>🔧 Simple Swiper Test</h1>
+    
+    <!-- Exact copy of original structure -->
+    <div class="animacja">
+        <div class="container"><div class="info"></div></div>
+        <ul class="bxtop">
+            <!-- animacja  -->
+            <li>
+                <div class="slide1"></div>
+            </li>
+            <li>
+                <div class="slide2"></div>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        // Debug console
+        const debug = document.getElementById('debug');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog(...args);
+            debug.innerHTML += args.join(' ') + '<br>';
+            debug.scrollTop = debug.scrollHeight;
+        };
+    </script>
+    
+    <script type="module" src="../src/js/simple-test.js"></script>
+</body>
+</html>
