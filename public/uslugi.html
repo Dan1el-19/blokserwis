@@ -7,36 +7,8 @@
     <meta name="Description" content="Blok Serwis - zajmującej się modernizacją, instalacją, naprawą oraz konserwacją wideofonów, domofonów analogowych jak również cyfrowych." />
     
     <link rel="stylesheet" type="text/css" href="css/design.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />   
-   
-    <script type="text/javascript" src="./scripts/jquery.min.js"></script>   
-    <script type="text/javascript" src="./scripts/jquery.bxslider.min.js"></script> 
-    <script type="text/javascript" src="./scripts/jquery.fancybox.js?v=2.1.5"></script>
-    
-    <script>
-      jQuery(document).ready(function($) {
-        $('.bxtop').bxSlider({            
-            captions: false,
-            pager: false,
-            autoHover:true,
-            randomStart:true,
-            auto:true
-          });
-      });
-
-      $(document).ready(function(){
-        $('.fancybox').fancybox({
-          // padding: 0,
-          openEffect : 'elastic',
-          openSpeed  : 150,
-          closeEffect : 'elastic',
-          closeSpeed  : 150,
-          nextClick : true,
-          closeClick : true       
-        });
-      });            
-  </script>
+    <!-- Modern libraries bundled by Vite -->
+    <script type="module" src="js/modern-bundle.js"></script>
   
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
